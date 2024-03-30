@@ -1,0 +1,8 @@
+<div class="App">
+  <span>Progress Bar</span>
+  <app-progress-bar
+    [value]="value"
+    (onComplete)="onComplete()"
+  ></app-progress-bar>
+  <span>{{ success ? "Complete!" : "Loading..." }}</span>
+</div>

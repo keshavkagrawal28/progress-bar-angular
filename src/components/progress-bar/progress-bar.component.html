@@ -1,0 +1,18 @@
+<div
+  [ngStyle]="{
+    color: percent > (MAX + MIN) / 2 - 1 ? 'white' : 'black'
+  }"
+  class="progress"
+>
+  <span> {{ percent.toFixed() }}% </span>
+  <div
+    [ngStyle]="{
+      transform: 'scaleX(' + percent / MAX +')',
+      transformOrigin: 'left',
+    }"
+    role="progressbar"
+    [attr.aria-valuemin]="MIN"
+    [attr.aria-valuemax]="MAX"
+    [attr.aria-valuenow]="percent.toFixed()"
+  ></div>
+</div>
